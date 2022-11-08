@@ -678,6 +678,7 @@ spec:
         name: Memory Usage
         queries:
           - query: |-
+                // import "math"
                 from(bucket: v.bucket)
                   |> range(start: v.timeRangeStart, stop: v.timeRangeStop)
                   |> filter(fn: (r) => r._measurement == "mem")
